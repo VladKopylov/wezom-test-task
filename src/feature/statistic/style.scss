@@ -1,0 +1,25 @@
+.statistic-container {
+  padding: 20px;
+
+  .statistic-content {
+    width: 500px;
+
+    .space-between {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .count-data {
+      display: flex;
+      flex-direction: column;
+
+      span:first-child {
+        color: rgba(0, 0, 0, 0.45);
+      }
+
+      span:last-child {
+        font-size: 18px;
+      }
+    }
+  }
+}

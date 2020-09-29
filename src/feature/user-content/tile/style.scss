@@ -1,0 +1,51 @@
+.tile-list-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tile-container {
+  width: 265px;
+
+  .tile-img {
+    width: 100%;
+    height: 240px;
+  }
+
+  .tile-info {
+    background-color: white;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .tile-main-info {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-size: 17px;
+      margin-bottom: 15px;
+
+      .user-age {
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.45);
+      }
+    }
+
+    .tile-extra-info {
+      padding: 0 30px;
+
+      div:not(:last-child) {
+        padding-bottom: 7px;
+      }
+    }
+
+    .tile-nat-block {
+      padding: 15px 30px;
+
+      .tile-nat-text {
+        border: 1px solid;
+        padding: 5px 10px;
+      }
+    }
+  }
+}

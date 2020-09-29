@@ -1,0 +1,14 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+
+  .w-91 {
+    width: 91%;
+  }
+
+  .display-switcher {
+    display: flex;
+    margin: 20px 0;
+    justify-content: flex-end;
+  }
+}
