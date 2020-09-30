@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Checkbox, Input } from "antd";
-import { Select } from "../../ui/select/Select";
+import { CloseOutlined } from "@ant-design/icons";
 
+import { Select } from "../../ui/select/Select";
 import { nationalitiesData } from "../../constants/nationalities";
 import { gender } from "../../constants/gender";
 
@@ -50,7 +51,7 @@ const UserFilter = ({
 
   return (
     <form>
-      <div className="first-div">
+      <div className="filter-section">
         <div className="ant-col ant-col-xs-24 ant-col-lg-11">
           <Search
             placeholder="Search by full name"
@@ -82,8 +83,9 @@ const UserFilter = ({
           <Checkbox>I am creator</Checkbox>
         </div>
       </div>
-      <div className="second-div" onClick={handleClear}>
-        Clear all
+      <div className="clear-section" onClick={handleClear}>
+        <CloseOutlined  />
+        <span> Clear</span>
       </div>
     </form>
   );

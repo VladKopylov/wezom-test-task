@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import { NationalStatistic } from "./NationalStatistic";
+
 import "./style.scss";
 
 const Statistic = ({ users }) => {
@@ -15,15 +17,15 @@ const Statistic = ({ users }) => {
       .length;
 
     if (male > female && male > indeterminate) {
-      setMsg("Мужчины доминируют");
+      setMsg("Men predominate");
     }
 
     if (female > male && female > indeterminate) {
-      setMsg("Женщины доминируют");
+      setMsg("Women predominate");
     }
 
     if (indeterminate > male && indeterminate > female) {
-      setMsg("Неопределившиеся доминируют");
+      setMsg("Indeterminate predominate");
     }
 
     setMaleCount(male);
@@ -33,28 +35,29 @@ const Statistic = ({ users }) => {
 
   return (
     <div className="statistic-container">
-      <h3>Статистика</h3>
+      <h3>Statistic</h3>
       <div className="statistic-content">
         <div className="space-between">
           <div className="count-data">
-            <span>Кол-во пользователей</span>
+            <span>Collection size</span>
             <span>{users.length}</span>
           </div>
           <div className="count-data">
-            <span>Мужчины</span>
+            <span>Males</span>
             <span>{maleCount}</span>
           </div>
           <div className="count-data">
-            <span>Женщины</span>
+            <span>Females</span>
             <span>{femaleCount}</span>
           </div>
           <div className="count-data">
-            <span>Неопределившиеся</span>
+            <span>Indeterminate</span>
             <span>{indeterminateCount}</span>
           </div>
         </div>
         <div className="text-center">{statisticMsg}</div>
       </div>
+      <NationalStatistic users={users} />
     </div>
   );
 };

@@ -5,16 +5,22 @@ form {
   margin: 0;
 }
 
-.first-div {
+.filter-section {
   display: flex;
-  flex-grow: 3;
-  width: 60%;
+  width: 85%;
   align-items: center;
   justify-content: space-between;
 }
 
-.second-div {
-  flex-grow: 1;
+.clear-section {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  color: #0087f5;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.clear-section:hover {
+  color: #40a9ff;
 }

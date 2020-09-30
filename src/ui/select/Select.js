@@ -33,8 +33,8 @@ const Select = ({
       style={{ width }}
       value={value}
       onChange={handleChange}
-      optionLabelProp="label"
       allowClear={allowClear}
+      maxTagCount={2}
     >
       {children}
     </AntSelect>

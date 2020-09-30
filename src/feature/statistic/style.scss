@@ -22,4 +22,27 @@
       }
     }
   }
+
+  .nat-statistic-container {
+    margin-top: 25px;
+
+    .nat-title {
+      color: rgba(0, 0, 0, 0.45);
+      margin: 0;
+    }
+
+    .nat-statistic-row {
+      display: flex;
+      padding: 7px 0;
+
+      .nat-statistic-item {
+        display: flex;
+        width: 210px;
+
+        b {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
 }
