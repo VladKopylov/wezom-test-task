@@ -7,6 +7,7 @@ const ToggleViewMode = ({ displayMode, onClick }) => {
 
   const handleClick = (e) => {
     const { name } = e.currentTarget;
+
     setSelected(name);
     onClick(name);
     localStorage.setItem("displayMode", name);
@@ -14,7 +15,7 @@ const ToggleViewMode = ({ displayMode, onClick }) => {
 
   return (
     <div>
-      <Tooltip title="Табличный вид">
+      <Tooltip title="Table view">
         <Button
           type={selectedBtn === "table" ? "primary" : "outlined"}
           icon={<UnorderedListOutlined />}
@@ -22,7 +23,7 @@ const ToggleViewMode = ({ displayMode, onClick }) => {
           onClick={handleClick}
         />
       </Tooltip>
-      <Tooltip title="Плиточный вид">
+      <Tooltip title="Tile view">
         <Button
           type={selectedBtn === "tile" ? "primary" : "outlined"}
           icon={<AppstoreOutlined />}

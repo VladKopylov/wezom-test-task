@@ -7,6 +7,7 @@ import { reducer } from "./natReducer";
 const NationalStatistic = ({ users }) => {
   const [state, dispatch] = useReducer(reducer);
   const [filteredNatData, setNatData] = useState([]);
+
   useEffect(() => {
     dispatch({ type: "reset" });
 
